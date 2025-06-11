@@ -179,13 +179,16 @@ button {
   border-radius: 10px;
   display: flex;
   align-items: flex-start;
-  gap: 15px;
+  gap: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   width: auto;
   max-width: 100%;
   background: #fff;
   border-radius: 10px;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: stretch;
+  padding: 20px;
+  align-items: center;
 }
  
 /* Optional responsive stacking on small screens */
@@ -196,10 +199,14 @@ button {
 }
 
 .product-box img {
-  max-width: 150px;
-  height: auto;
+  max-width: 180px;
+  height: 100%;
+  width: 200px
   object-fit: cover;
   border-radius: 8px;
+  flex-shrink: 0;
+  object-fit: fill;
+  flex-shrink: 0;
 }
 
 .product-box ul {
@@ -216,15 +223,20 @@ button {
 
 .product-content {
 	flex: 1;
+	padding: 0;
 }
 
 @media screen and (max-width: 768px)
 {
 	.product-box {
 		flex-direction: column;
+		align-items: center;
+		text-align: center;
 	}
 	
 	.product-box img {
 		width: 100%;
+		height: auto;
+		object-fit: contain;
 	}
 }
