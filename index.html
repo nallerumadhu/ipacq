@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,17 +7,123 @@
   <title>iPACQ Solutions</title>
   <link rel="stylesheet" href="styles.css" />
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #e60000;
+    }
+    .product-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .product-box {
+      background: #fff;
+      display: flex;
+      width: 100%;
+      max-width: 540px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .product-img {
+      width: 50%;
+      height: auto;
+      object-fit: cover;
+    }
+    .product-content {
+      padding: 15px;
+      width: 50%;
+    }
+    .product-content h3 {
+      margin-top: 0;
+    }
+    .product-content ul {
+      padding-left: 20px;
+    }
+    .read-more {
+      margin-top: 10px;
+      display: inline-block;
+      background: #e60000;
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    @media screen and (max-width: 768px) {
+      .product-box {
+        flex-direction: column;
+        max-width: 100%;
+      }
+      .product-img, .product-content {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="top-bar">
-    iPACQ
+  <div class="hero">
+  <div class="overlay">
+    <div class="company-name">iPACQ <span>Solutions</span></div>
+    <h1>Your Trusted Partner for PPE & Industrial Safety Products</h1>
+    <p>Supplying quality safety gloves, ear protection, safety clothing and more to industries across India.</p>
+    <a href="#about" class="cta-button">Learn More</a>
   </div>
-  <header class="hero">
-    <div class="hero-text">
-      <h1>Site is under Mainatainance... Will be back soon</h1>
+</div>
+ 
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      iPACQ Solutions is dedicated to protecting the workforce through high-quality Personal Protective Equipment.
+      Based in India, we partner with industries to deliver reliable certified safety gear.
+    </p>
+  </section>
+ 
+
+<section class="products">
+ <section class="section">
+    <h2>Hand Protection</h2>
+    <div class="product-row">
+      <div class="product-box">
+        <img src="images/hero.jpg" alt="Knitted Gloves" class="product-img">
+        <div class="product-content">
+          <h3>Knitted Gloves</h3>
+          <ul>
+            <li>Comfortable and breathable</li>
+            <li>Available in cotton/polyester blends</li>
+            <li>Used in general handling and packaging</li>
+          </ul>
+          <!-- <a class="read-more" href="#">Read More</a> -->
+        </div>
+      </div><div class="product-box">
+    <img src="images/hero.jpg" alt="PU Coated Gloves" class="product-img">
+    <div class="product-content">
+      <h3>PU Coated Gloves</h3>
+      <ul>
+        <li>Excellent grip and dexterity</li>
+        <li>Lightweight and durable</li>
+        <li>Used in assembly and electronics work</li>
+      </ul>
+       <!-- <a class="read-more" href="#">Read More</a> -->
     </div>
-  </header>
-  
+  </div>
+</div>
+  </section>
+</section>
+
+ 
   <section class="contact">
     <h2>Contact Us</h2>
     <form>
@@ -26,7 +133,7 @@
       <button type="submit">Send Message</button>
     </form>
     <div class="contact-details">
-      <p><i class="fas fa-envelope"></i> ipacqsolutions@gmail.com</p>
+      <p><i class="fas fa-envelope"></i> ipcqsolutions@gmail.com</p>
       <p><i class="fas fa-phone"></i> +91-9363512069</p>
       <p><i class="fas fa-map-marker-alt"></i> 1/248, Madakasira Road, Penukond, A.P - 515110</p>
       <div class="social-icons">
