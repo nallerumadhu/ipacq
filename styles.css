@@ -6,14 +6,71 @@ body {
   color: #333;
 }
  
+ .top-bar {
+  background-color: #00264d;
+  color: white;
+  padding: 16px 0;
+  text-align: center;
+}
+ 
+.brand-name {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .hero {
-  background: url('images/hero.jpg') no-repeat center center/cover;
-  height: 100vh;
+  position: relative;
+  background-image: url('images/hero.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  color: white;
   display: flex;
   align-items: center;
-  justify-content: left;
-  padding: 0 5%;
+  justify-content: center;
+  text-align: center;
+}
+ 
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* dark transparent overlay */
+  padding: 40px;
+  width: 100%;
+}
+ 
+.company-name {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+ 
+.company-name span {
+  color: #00c3ff; /* accent color */
+}
+ 
+.hero h1 {
+  font-size: 28px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+ 
+.hero p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+ 
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #00c3ff;
   color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
 }
  
 .hero h1 {
@@ -56,6 +113,12 @@ body {
   text-align: center;
   margin-top: 0.5rem;
   font-weight: bold;
+}
+
+.products .product-category h3 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: ##0047ab;
 }
  
 .contact {
