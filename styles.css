@@ -165,3 +165,27 @@ button {
   color: #0047ab;
   text-decoration: none;
 }
+
+.product-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  gap: 20px;
+  margin: 40px 0;
+}
+ 
+.product-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+ 
+/* Optional responsive stacking on small screens */
+@media (max-width: 768px) {
+  .product-row {
+    grid-template-columns: 1fr;
+  }
+}
