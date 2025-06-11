@@ -181,10 +181,11 @@ button {
   align-items: flex-start;
   gap: 15px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  width: 100%;
+  width: auto;
   max-width: 100%;
   background: #fff;
   border-radius: 10px;
+  flex-direction: column;
 }
  
 /* Optional responsive stacking on small screens */
@@ -211,4 +212,19 @@ button {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
   transition: all 0.3s ease;
+}
+
+.product-content {
+	flex: 1;
+}
+
+@media screen and (max-width: 768px)
+{
+	.product-box {
+		flex-direction: column;
+	}
+	
+	.product-box img {
+		width: 100%;
+	}
 }
