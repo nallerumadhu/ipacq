@@ -8,13 +8,6 @@
   <link rel="stylesheet" href="styles.css" />
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
     .section {
       padding: 40px 20px;
       max-width: 1200px;
@@ -124,18 +117,55 @@
 </section>
 
  
-  <section class="contact">
+  <section class="contact-section">
     <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="Email" required />
-      <textarea placeholder="Message" required></textarea>
+	<form id="contact-form" action="https://formspree.io/f/movwdlpo" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="mobile" placeholder="Mobile Number" required pattern="[0-9]{10}" />
+      <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
+      <div id="form-response"></div>
     </form>
+
+<div id="form-response" style="margin-top: 20px; font-weight: bold; color: green;"></div>
+
+<script>
+  const form = document.getElementById("contact-form");
+  const responseDiv = document.getElementById("form-response");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault(); // Prevent redirect
+
+    const formData = new FormData(form);
+    const action = form.action;
+
+    try {
+      const response = await fetch(action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        responseDiv.textContent = "✅ Thank you! Your message has been sent.";
+        form.reset(); // Clear form
+      } else {
+        responseDiv.textContent = "❌ Oops! Something went wrong.";
+      }
+    } catch (error) {
+      responseDiv.textContent = "❌ Error connecting to server.";
+    }
+  });
+</script>
+
+<input type="text" name="_gotcha" style="display:none">
     <div class="contact-details">
-      <p><i class="fas fa-envelope"></i> ipcqsolutions@gmail.com</p>
+      <p><i class="fas fa-envelope"></i> ipacqsolutions@gmail.com</p>
       <p><i class="fas fa-phone"></i> +91-9363512069</p>
-      <p><i class="fas fa-map-marker-alt"></i> 1/248, Madakasira Road, Penukond, A.P - 515110</p>
+      <p><i class="fas fa-map-marker-alt"></i> 1/248, Madakasira Road, Penukonda, A.P - 515110</p>
       <div class="social-icons">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
