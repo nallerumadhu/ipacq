@@ -1,41 +1,12 @@
-<section class="home-slider">
-  <div class="swiper homeSwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="images/home1.jpg" alt="Slide 1" /></div>
-      <div class="swiper-slide"><img src="images/home2.jpg" alt="Slide 2" /></div>
-      <div class="swiper-slide"><img src="images/home3.jpg" alt="Slide 3" /></div>
-    </div>
-  </div>
-</section>
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  const homeSwiper = new Swiper(".homeSwiper", {
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    effect: "slide",
-    speed: 600,
-  });
-</script>
-
-.home-slider {
-  margin-top: 70px; /* match your navbar height */
-}
-
-.homeSwiper {
-  width: 100vw;
-  height: 60vh;
-  overflow: hidden;
-}
-
-.homeSwiper .swiper-slide img {
-  width: 100vw;
-  height: 60vh;
-  object-fit: cover;
-  display: block;
-}
+<div class="about-description">
+  <h2>About iPACQ Solutions</h2>
+  <p>
+    iPACQ Solutions is a trusted provider of high-quality Personal Protective Equipment (PPE) and industrial safety solutions. We are committed to creating safer workplaces by equipping organizations with reliable, certified protective gear.
+  </p>
+  <p>
+    From protective gloves and safety apparel to hearing protection and industrial gear, our products are designed to meet the demands of today's safety-conscious industries. With a focus on quality, compliance, and affordability, we serve clients across manufacturing, construction, automotive, logistics, and more.
+  </p>
+  <p>
+    At iPACQ, our goal is simple — to help businesses protect their most valuable asset: their people. With efficient logistics, customer-first service, and a dedication to safety standards, we are proud to be your partner in workplace protection.
+  </p>
+</div>
