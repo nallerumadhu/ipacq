@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iPACQ Solutions</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="navbar">
+  <div class="logo">
+    <img src="images/Water_Mark.jpg" alt="iPACQ Logo" />
+  </div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="contact.html" class="cta-button red">Get In Touch</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+</header>
+
+<div id="home" class="hero">
+  <div class="overlay">
+    <div class="company-name">iPACQ <span>Solutions</span></div>
+    <h1>Your Trusted Partner for PPE & Industrial Safety Products</h1>
+    <p>Supplying quality safety gloves, ear protection, safety clothing and more to industries across India.</p>
+    <a href="about.html" class="cta-button">Learn More</a>
+  </div>
+</div>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+</script>
+</body>
+</html>

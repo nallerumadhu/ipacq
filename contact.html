@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iPACQ Solutions</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="navbar">
+  <div class="logo">
+    <img src="images/Water_Mark.jpg" alt="iPACQ Logo" />
+  </div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="contact.html" class="cta-button red">Get In Touch</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+</header>
+
+<section id="contact" class="contact-section">
+  <div class="contact-card">
+    <h2>Contact Us</h2>
+    <form id="contact-form" action="https://formspree.io/f/movwdlpo" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="mobile" placeholder="Mobile Number" required pattern="[0-9]{10}" />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+      <div id="form-response"></div>
+    </form>
+    <div class="contact-details">
+      <p><i class="fas fa-envelope"></i> ipacqsolutions@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +91-9363512069</p>
+      <p><i class="fas fa-map-marker-alt"></i> 1/248, Madakasira Road, Penukonda, A.P - 515110</p>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://x.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  const form = document.getElementById("contact-form");
+  const responseDiv = document.getElementById("form-response");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const action = form.action;
+
+    try {
+      const response = await fetch(action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        responseDiv.textContent = "✅ Thank you! Your message has been sent.";
+        form.reset();
+      } else {
+        responseDiv.textContent = "❌ Oops! Something went wrong.";
+      }
+    } catch (error) {
+      responseDiv.textContent = "❌ Error connecting to server.";
+    }
+  });
+</script>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+</script>
+</body>
+</html>

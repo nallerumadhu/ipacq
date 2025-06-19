@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iPACQ Solutions</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="navbar">
+  <div class="logo">
+    <img src="images/Water_Mark.jpg" alt="iPACQ Logo" />
+  </div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="contact.html" class="cta-button red">Get In Touch</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+</header>
+
+<section class="about" id="about">
+  <h2>About Us</h2>
+  <p>
+    At iPACQ (Industrial Protection and Compliance Quality), we are committed to safeguarding lives through reliable, certified and high-performance Personal Protective Equipment (PPE). As a trusted supplier in the industrial safety domain, iPACQ delivers a wide range of PPE solutions designed to meet the most demanding workplace safety and compliance standards.
+
+    <br><br><strong>Our name reflects our core values:</strong><br>
+    <strong>Industrial Protection</strong> – Ensuring workers across industries are equipped with the right tools to stay safe on the job.<br>
+    <strong>Compliance</strong> – Ensuring all products meet or exceed National and International safety standards.<br>
+    <strong>Quality</strong> – Delivering superior craftsmanship, reliability and consistency in each product.
+  </p>
+</section>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+</script>
+</body>
+</html>
