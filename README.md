@@ -82,3 +82,27 @@
   color: #555;
   line-height: 1.6;
 }
+
+
+
+.swiper {
+  width: 100vw; /* full viewport width */
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.swiper-slide {
+  width: 100vw;
+  height: auto;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
