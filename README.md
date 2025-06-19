@@ -1,8 +1,8 @@
 <section class="about-gallery">
-  <div class="gallery-container">
-    <img src="images/about1.jpg" alt="Workplace 1" />
-    <img src="images/about2.jpg" alt="Workplace 2" />
-    <img src="images/about3.jpg" alt="Workplace 3" />
+  <div class="gallery-scroll">
+    <img src="images/about1.jpg" alt="Team at Work" />
+    <img src="images/about2.jpg" alt="Factory Floor" />
+    <img src="images/about3.jpg" alt="Product Showcase" />
   </div>
 
   <div class="about-description">
@@ -22,19 +22,22 @@
   background: #fff;
 }
 
-.gallery-container {
+.gallery-scroll {
   display: flex;
-  flex-direction: column;
   gap: 20px;
-  align-items: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
   margin-bottom: 40px;
 }
 
-.gallery-container img {
-  width: 100%;
-  max-width: 800px;
+.gallery-scroll img {
+  flex: 0 0 auto;
+  width: 80%;
+  max-width: 600px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  scroll-snap-align: start;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .about-description {
@@ -55,5 +58,3 @@
   line-height: 1.6;
   margin-bottom: 16px;
 }
-
-
