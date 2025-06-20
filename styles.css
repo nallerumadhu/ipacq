@@ -197,6 +197,8 @@ button {
   align-items: stretch;
   padding: 20px;
   align-items: center;
+  justify-content: flex-start;
+  height: 100%;
 }
  
 /* Optional responsive stacking on small screens */
@@ -230,8 +232,10 @@ button {
 }
 
 .product-content {
-	flex: 1;
-	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	height: 100%;
 }
 
 @media screen and (max-width: 768px)
@@ -353,7 +357,8 @@ button {
   padding: 15px 30px;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
+  height: 70px;
 }
 
 .logo img {
@@ -427,4 +432,226 @@ button {
 html
 {
 	scroll-behavior: smooth;
+}
+
+.about-gallery {
+	padding: 0;
+	margin: 0;
+}
+
+.swiper {
+  width: 100vw; /* full viewport width */
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overfloe: hidden;
+}
+
+.swiper-slide {
+	padding: 0;
+	margin: 0;
+	width: 100vw;
+}
+
+.swiper-slide img {
+  width: 100vw;
+  height: 60vh;
+  display: block;
+  object-fit: cover;
+}
+
+.about-description {
+  margin-top: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-description h2 {
+  font-size: 28px;
+  color: #00264d;
+  margin-bottom: 20px;
+}
+
+.about-description p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+body,
+.about-gallery {
+  margin: o;
+  padding: 0;
+}
+
+.home-slider {
+  margin-top: 70px; /* match your navbar height */
+}
+
+.homeSwiper {
+  width: 100vw;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.homeSwiper .swiper-slide img {
+  width: 100vw;
+  height: 60vh;
+  object-fit: cover;
+  display: block;
+}
+
+.Hand_Protection h2 {
+	text-align: center;
+	font-size: 28px;
+	color: #00264d;
+	margin-bottom: 30px;
+}
+
+.Body_Protection h2 {
+	text-align: center;
+	font-size: 28px;
+	color: #00264d;
+	margin-bottom: 30px;
+}
+
+.Eye_Protection h2 {
+	text-align: center;
+	font-size: 28px;
+	color: #00264d;
+	margin-bottom: 30px;
+}
+
+.Foot_Protection h2 {
+	text-align: center;
+	font-size: 28px;
+	color: #00264d;
+	margin-bottom: 30px;
+}
+
+.Respiratory_Protection h2 {
+	text-align: center;
+	font-size: 28px;
+	color: #00264d;
+	margin-bottom: 30px;
+}
+
+.Ear_Protection h2 {
+	text-align: center;
+	font-size: 28px;
+	color: #00264d;
+	margin-bottom: 30px;
+}
+
+.Head_Protection h2 {
+	text-align: center;
+	font-size: 28px;
+	color: #00264d;
+	margin-bottom: 30px;
+}
+
+.product-slider {
+  width: 240px;
+  height: 160px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+ 
+.product-slider .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-fit: contain;
+  background: #fff;
+}
+
+.protection-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px 5%;
+  background-color: #fff;
+}
+
+.category-box {
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.category-box:hover {
+  transform: scale(1.05);
+}
+
+.category-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.category-label {
+  background-color: #0056a3; /* dark blue */
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 32, 96, 0.8); /* navy overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+ 
+ .label-bar {
+  background-color: #0056a3; /* blue bar */
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+}
+.category-box:hover .hover-overlay {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .protection-categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .protection-categories {
+    grid-template-columns: 1fr;
+  }
 }
